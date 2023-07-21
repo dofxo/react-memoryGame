@@ -1,6 +1,6 @@
 const GameContainer = () => {
   return (
-    <div className="game-container flex flex-wrap gap-6">
+    <div className="game-container flex flex-wrap gap-6 mt-10" >
     </div>
   )
 }

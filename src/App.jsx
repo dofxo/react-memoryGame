@@ -4,8 +4,9 @@ const App = () => {
 	return (
 		<>
 		<div className="container">
-		<h1 className="text-center text-4xl font-bold">Memory Game</h1>
-    <GameContainer />
+		<h1 className="text-center text-4xl font-bold text-white">Memory Game</h1>
+			{/* Game Container */}
+			<GameContainer />
 		</div>
 		</>
 	)
