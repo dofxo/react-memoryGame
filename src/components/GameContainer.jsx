@@ -13,7 +13,7 @@ const GameContainer = () => {
   );
 
   return (
-    <div className="game-container flex flex-wrap gap-6 mt-10 justify-between">
+    <div className="game-container flex flex-wrap gap-6 mt-5 justify-between">
       {shuffledList.map((card) => (
         <Card key={uuidv4()} cardDetails={card} />
       ))}
