@@ -1,20 +1,19 @@
 // components
 import GameContainer from "./components/GameContainer";
-import ResetGameButton from "./components/ResetGameButton";
 
 const App = () => {
-  return (
-    <>
-      <div className="container">
-        <h1 className="text-center text-4xl font-bold text-white">
-          Memory Game
-        </h1>
-        <ResetGameButton />
-        {/* Game Container */}
-        <GameContainer />
-      </div>
-    </>
-  );
+
+	return (
+		<>
+			<div className="container">
+				<h1 className="text-center text-4xl font-bold text-white">
+					Memory Game
+				</h1>
+				{/* Game Container */}
+				<GameContainer />
+			</div>
+		</>
+	);
 };
 
 export default App;

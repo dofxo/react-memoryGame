@@ -5,20 +5,19 @@ import classNames from "classnames";
 // styles
 import "../styles/components/Card.scss";
 
-const Card = ({ cardDetails }) => {
+const Card = ({ cardDetails, handleClickCard }) => {
   // satate to track the clicked status on cards
-  const [clicked, setClicked] = useState(false);
 
   // class name for the card using "ClassNames"
   const clickedClassName = classNames({
-    ["clicked-card"]: clicked,
+    ["clicked-card"]: cardDetails.matched,
     card: true,
   });
   return (
     <div
       // change the card classList onClick to flip the card
       onClick={() => {
-        setClicked((prev) => (prev = true));
+        handleClickCard(cardDetails);
       }}
       className={clickedClassName}
     >
