@@ -25,7 +25,7 @@ const Card = ({ cardDetails }) => {
       <div className="card-front">
         <img src="../../assets/images/card-bg.jpg" alt="" />
       </div>
-      <div className="card-back">{cardDetails}</div>
+      <div className="card-back">{cardDetails.info}</div>
     </div>
   );
 };
