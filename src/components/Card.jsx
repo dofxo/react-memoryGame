@@ -1,28 +1,24 @@
 // elpers
-import { useState } from "react";
 import classNames from "classnames";
 
 // styles
 import "../styles/components/Card.scss";
 
-const Card = ({ cardDetails, handleClickCard }) => {
-  // satate to track the clicked status on cards
-  const [clicked, setClicked] = useState(false);
-
+const Card = ({ cardDetails, handleCardClick, flipped, disabled }) => {
   // class name for the card using "ClassNames"
   const clickedClassName = classNames({
-    ["clicked-card"]: clicked,
+    ["clicked-card"]: flipped,
     card: true,
   });
   return (
-    <div
-      // change the card classList onClick to flip the card
-      onClick={() => {
-        setClicked((prev) => (prev = true));
-      }}
-      className={clickedClassName}
-    >
-      <div className="card-front">
+    <div className={clickedClassName}>
+      <div
+        // change the card classList onClick to flip the card if the disabled prop is false.
+        onClick={() => {
+          !disabled ? handleCardClick(cardDetails) : "";
+        }}
+        className="card-front"
+      >
         <img src="../../assets/images/card-bg.jpg" alt="" />
       </div>
       <div className="card-back">{cardDetails.info}</div>
