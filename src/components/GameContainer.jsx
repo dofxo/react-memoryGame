@@ -31,6 +31,7 @@ const GameContainer = () => {
     // set the choices to null incase the didn't change on game restart.
     setFirstChoice(null);
     setSecondChoice(null);
+    setTurn(0);
   };
 
   // on component first render
@@ -65,6 +66,14 @@ const GameContainer = () => {
     }
   }, [firstChoice, secondChoice]);
 
+  // restarts the game if the turns are half of the main array lenght
+  useEffect(() => {
+    if (cards.length / 2 === turns) {
+      alert("you've finished the game.");
+      gameRestartHandle();
+    }
+  }, [turns]);
+
   // reset choices
   const resetChoice = () => {
     setFirstChoice(null);
@@ -77,14 +86,10 @@ const GameContainer = () => {
   const handleCardClick = (cardInfo) => {
     !firstChoice ? setFirstChoice(cardInfo) : setSecondChoice(cardInfo);
   };
-  // restart the game
-  const gameRestartHandle = () => {
-    startTheGame();
-    setTurn(0);
-  };
+
   return (
     <>
-      <StartGame gameRestartHandle={gameRestartHandle} turns={turns} />
+      <StartGame startTheGame={startTheGame} turns={turns} />
       <div className="game-container flex flex-wrap gap-6 mt-5 justify-between">
         {cards.map((card) => (
           <Card
