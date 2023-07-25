@@ -4,15 +4,15 @@ const cardsList = [
     matched: false,
   },
   {
-    info: `/assets/images/card2.jpg`,
+    info: `/assets/images/card2.avif`,
     matched: false,
   },
   {
-    info: `/assets/images/card3.jpg`,
+    info: `/assets/images/card3.webp`,
     matched: false,
   },
   {
-    info: `/assets/images/card4.jpg`,
+    info: `/assets/images/card4.png`,
     matched: false,
   },
   {
@@ -20,7 +20,7 @@ const cardsList = [
     matched: false,
   },
   {
-    info: `/assets/images/card6.jpg`,
+    info: `/assets/images/card6.webp`,
     matched: false,
   },
 ];
