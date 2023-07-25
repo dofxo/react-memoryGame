@@ -66,14 +66,6 @@ const GameContainer = () => {
     }
   }, [firstChoice, secondChoice]);
 
-  // restarts the game if the turns are half of the main array lenght
-  useEffect(() => {
-    if (cards.length / 2 === turns) {
-      alert("you've finished the game.");
-      gameRestartHandle();
-    }
-  }, [turns]);
-
   // reset choices
   const resetChoice = () => {
     setFirstChoice(null);
