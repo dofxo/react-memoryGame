@@ -3,7 +3,7 @@ const StartGame = ({ startTheGame, turns }) => {
     <div className="flex justify-center mt-5 items-center gap-x-10">
       <button
         onClick={startTheGame}
-        className="text-white p-2 bg-purple-500 border border-transparent rounded hover:bg-transparent hover:border-purple-500 hover:border transition"
+        className="text-white p-2 bg-red-600 border border-transparent rounded hover:bg-transparent hover:border-red-600 hover:border transition"
       >
         restart the game
       </button>
