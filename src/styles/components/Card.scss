@@ -12,6 +12,7 @@
     backface-visibility: hidden;
   }
   .card-front {
+    @apply bg-purple-600 p-5;
     transform: rotateY(0deg);
     img {
       border-radius: inherit;

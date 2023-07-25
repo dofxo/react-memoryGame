@@ -19,7 +19,7 @@ const Card = ({ cardDetails, handleCardClick, flipped, disabled }) => {
         }}
         className="card-front"
       >
-        <img src="../../assets/images/card-bg.jpg" alt="" />
+        <img src="../../assets/images/card-game-bg.png" alt="" />
       </div>
       <div className="card-back">{cardDetails.info}</div>
     </div>
