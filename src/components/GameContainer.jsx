@@ -14,6 +14,7 @@ const GameContainer = () => {
   const [cards, setCards] = useState([]);
   const [turns, setTurn] = useState(0);
   const [disable, setDisabled] = useState(false);
+  const [matched, changeMatchedCount] = useState(0);
 
   const [firstChoice, setFirstChoice] = useState(null);
   const [secondChoice, setSecondChoice] = useState(null);
@@ -34,6 +35,32 @@ const GameContainer = () => {
     setTurn(0);
   };
 
+  // if the matched cards are half of the items array, the game will be finished
+  useEffect(() => {
+    if (cards && matched) {
+      if (matched === cards.length / 2) {
+        silverBox({
+          alertIcon: "info",
+          centerContent: true,
+          theme: "dark",
+          title: "You've paired all the images!",
+          html: `Your Turn's count : ${turns}`,
+          onClose: () => {
+            startTheGame();
+            changeMatchedCount(0);
+          },
+          cancelButton: {
+            text: "restart the game",
+            onClick: () => {
+              startTheGame();
+              changeMatchedCount(0);
+            },
+          },
+        });
+      }
+    }
+  }, [cards, matched]);
+
   // on component first render
   useEffect(() => {
     startTheGame();
@@ -46,6 +73,7 @@ const GameContainer = () => {
       setDisabled(true);
       // if the choices matches we gonna update the cards state and change their matched key of the paired cards to true.
       if (firstChoice.info === secondChoice.info) {
+        changeMatchedCount((prev) => (prev += 1));
         setCards((prev) =>
           prev.map((card) => {
             if (card.info === firstChoice.info) {
