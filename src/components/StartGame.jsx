@@ -1,11 +1,11 @@
-const StartGame = ({ gameStartHanlde, turns }) => {
+const StartGame = ({ gameRestartHandle, turns }) => {
   return (
     <div className="flex justify-center mt-5 items-center gap-x-10">
       <button
-        onClick={gameStartHanlde}
+        onClick={gameRestartHandle}
         className="text-white p-2 bg-purple-500 border border-transparent rounded hover:bg-transparent hover:border-purple-500 hover:border transition"
       >
-        Start the game
+        restart the game
       </button>
       <h3 className="text-white">Turns : {turns}</h3>
     </div>
