@@ -1,26 +1,26 @@
 const cardsList = [
   {
-    info: 1,
+    info: `/assets/images/card1.jpg`,
     matched: false,
   },
   {
-    info: 2,
+    info: `/assets/images/card2.jpg`,
     matched: false,
   },
   {
-    info: 3,
+    info: `/assets/images/card3.jpg`,
     matched: false,
   },
   {
-    info: 4,
+    info: `/assets/images/card4.jpg`,
     matched: false,
   },
   {
-    info: 5,
+    info: `/assets/images/card5.jpg`,
     matched: false,
   },
   {
-    info: 6,
+    info: `/assets/images/card6.jpg`,
     matched: false,
   },
 ];

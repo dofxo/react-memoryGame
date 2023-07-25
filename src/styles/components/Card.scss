@@ -21,11 +21,15 @@
     }
   }
   .card-back {
-    @apply bg-purple-600;
     transform: rotateY(180deg);
     display: flex;
     justify-content: center;
     align-items: center;
+    img {
+      border-radius: 15px;
+      width: 100%;
+      height: 100%;
+    }
   }
   &.clicked-card {
     .card-front {

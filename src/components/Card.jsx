@@ -21,7 +21,9 @@ const Card = ({ cardDetails, handleCardClick, flipped, disabled }) => {
       >
         <img src="../../assets/images/card-game-bg.png" alt="" />
       </div>
-      <div className="card-back">{cardDetails.info}</div>
+      <div className="card-back">
+        <img src={cardDetails.info} alt="" />
+      </div>
     </div>
   );
 };
