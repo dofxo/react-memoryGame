@@ -15,7 +15,7 @@ const Card = ({ cardDetails, handleCardClick, flipped, disabled }) => {
 		card: true,
 	});
 	return (
-		<div className={clickedClassName}>
+		<div className={`${clickedClassName} max-[530px]:w-20 max-[530px]:h-20 `}>
 			<div
 				// change the card classList onClick to flip the card if the disabled prop is false.
 				onClick={() => {
